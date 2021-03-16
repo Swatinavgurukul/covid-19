@@ -134,5 +134,5 @@ function getDataOfSingleState(states) {
 // To LogOut The Current User
 function logOutUser() {
     localStorage.setItem('loginAcc', '');
-    window.location.href = './signup.html';
+    window.location.href = './index.html';
 };

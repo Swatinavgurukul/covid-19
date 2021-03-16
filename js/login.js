@@ -31,13 +31,13 @@ logInBtn.addEventListener('click', () => {
                 newPassword.style.borderColor = "Red"
                 let login_alert_2 = document.getElementById('login_alert_2')
                 login_alert_2.click()
-                // window.location.href = "signup.html"
+                // window.location.href = "index.html"
             }
         }
         else {
             let login_alert_1 = document.getElementById('login_alert_1')
             login_alert_1.click()
-            // window.location.href = "signup.html"
+            // window.location.href = "index.html"
 
         }
     }
@@ -49,5 +49,5 @@ logInBtn.addEventListener('click', () => {
 
 //Already have not acount
 let alreadyNotAcountBtn = document.getElementById('alreadyNotAcount');
-alreadyNotAcountBtn.addEventListener('click', () => window.location.href = 'signup.html')
+alreadyNotAcountBtn.addEventListener('click', () => window.location.href = 'index.html')
 
