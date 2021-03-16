@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Akaya Telivigala', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* Login page and signup page css starting */
+
+.signup_page,.login_page,.modal_bg,.dashboard_page{
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+.signup_btn,.login_btn{
+    color: white;
+    background-color: yellowgreen;
+}
+
+.form_container{
+    border-radius: 10px;
+    margin:0 auto;
+    width:80%;
+    background-color: skyblue;
+    box-shadow: #00000052 2px 1px 10px;
+}
+
+/* signup page profile start */
+
+.profile_box{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    overflow: hidden;
+}
+.avatar_pic{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.image_uploader{
+    display: none;
+}
+.image_upload_button{
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+/* signup page profile end */
+/* Login page and signup page css starting */
+/* -------------------------------------- */
+
+/* Covid Landing Page css starting  */
+
+.state_container {
+    background: #f8ed8e;
+    border-radius: 10px;
+    box-shadow: #00000052 2px 1px 10px;
+
+}
+.state_container, .district_wise_graph, .state_wise_graph{
+    height: 440px;
+    overflow-y: scroll;
+    overflow-x: visible;
+    white-space: nowrap;
+}
+.district_wise_graph, .state_wise_graph {
+    height: 160px;
+}
+.state_container::-webkit-scrollbar, .district_wise_graph::-webkit-scrollbar, .state_wise_graph::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.state_container::-webkit-scrollbar-thumb, .district_wise_graph::-webkit-scrollbar-thumb, .state_wise_graph::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); 
+}
+.state_container::-webkit-scrollbar-corner, .district_wise_graph::-webkit-scrollbar-corner, .state_wise_graph::-webkit-scrollbar-corner { 
+    background: transparent;
+ }
+
+.loading_spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+.dashboard_screen .row {
+    --bs-gutter-x: 0;
+}
+.data_box {
+    border: 2px solid transparent;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgb(8, 181, 250);
+    box-shadow: #00000052 2px 1px 10px;
+}
+.data_box:hover {
+    cursor: pointer;
+    background: rgb(23, 135, 179) !important;
+    box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%), 0px 2px 6px 2px rgb(60 64 67 / 15%);
+    transform: translateY(-3px);
+    color: #000;
+}
+
+abbr[title] {
+    cursor: pointer;
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+/* cursor: inherit !important; */
+
+
+@media only screen and (max-width: 768px) {
+    .state_container {
+        height: auto;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+    .state_container::-webkit-scrollbar {
+        width: 12px;
+    }
+    .state_container::-webkit-scrollbar-thumb {
+        background-color: green;
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    }
+    .state_container div {
+        display: inline-block;
+    }
+}
+
+selector.generate_box{
+    box-shadow: 0 3px 20px 4px rgba(0,0,0,.15);
+    border-radius: 10px;
+    margin-right: 2%;
+}
+@media(max-width:539.98px){
+    selector.generate_box{
+        margin-bottom:5%;
+    }
+}
+/* Covid Landing Page css end */
+
+

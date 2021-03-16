@@ -1,0 +1,182 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Covid-19-App</title>
+
+    <meta name="title" content="Covid-19-App">
+    <meta name="description" content="This is a covid-19 app. It will collect all data all cases from India">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- Bootstrape icons  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+    <!-- CSS Style  -->
+    <link rel="stylesheet" href="./css/global.css">
+
+</head>
+
+<body class="signup_page">
+    <div class="container p-0">
+        <!-- Signup form-->
+        <div class="row justify-content-center align-items-center h-100">
+            <form class="px-3 py-3 form_container">
+                <h1 class="text-center py-2">Signup</h1>
+                <div class="profile_pic_container d-flex justify-content-center pb-5">
+                    <div class="profile_box">
+                        <img src="./image/profile_pic.jpeg" alt="Avatar" class="avatar avatar_pic" id="avatar_pic">
+                        <input type="file" class="image_uploader" id="image_uploader">
+                        <label for="image_uploader" class="image_upload_button" title="Upload image"><i
+                                class="bi bi-image-fill text-info" style="font-size: 35px;"></i></label>
+                    </div>
+                </div>
+                <div class="mb-0 mb-md-3 row row-cols-1 row-cols-md-2">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="firstName" aria-describedby="emailHelp"
+                            placeholder="First Name">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="lastName" aria-describedby="emailHelp"
+                            placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="mb-0 mb-md-3 row">
+                    <div class="col-5 col-sm-3 mb-3">
+                        <select class="form-select form-select-md" id="dial-code-box"
+                            aria-label=".form-select-md example">
+                        </select>
+                    </div>
+                    <div class="mb-3 col-7 col-sm-9">
+                        <input type="number" class="form-control" id="phoneNumber" aria-describedby="emailHelp"
+                            placeholder="Phone Number">
+                    </div>
+                </div>
+                <div class="mb-0 mb-md-3 row">
+                    <div class="mb-3 col-5 col-sm-3">
+                        <input type="text" class="form-control" id="pincode" aria-describedby="emailHelp"
+                            placeholder="Pincode">
+                    </div>
+                    <div class="mb-3 col-7 col-sm-9">
+                        <input type="text" class="form-control" id="address" aria-describedby="emailHelp"
+                            placeholder="Address">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="emailAddress" placeholder="Email">
+                </div>
+                <div class="mb-3 row row-cols-1 row-cols-sm-3">
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="userPassword" placeholder="Password">
+                        <div style="font-size: 10px;" id="message">
+                            <p class="text-danger d-none" id="password_message">A lowercase, uppercase and number with 8 characters.</p>
+                          </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                    </div>
+                    <div class="mb-3">
+                        <input type="date" class="form-control" id="dateOfBirth">
+                        <div style="font-size: 10px;" id="message">
+                            <p class="text-danger d-none" id="dateOfBirth_msg">Age Must be 18 or greater than 18.
+                                .</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 text-start mb-2">
+                    <a href="#" id="alreadyAcount" class="text-dark">Already have an acount!</a>
+                </div>
+                <div class="text-center mt-4">
+                    <button type="button" class="btn signup_btn" id="signupBtn">SignUp</button>
+                </div>
+            </form>
+        </div>
+        <!-- Signup form-->
+
+        <!-- Button trigger modal -->
+        <div type="button" data-bs-toggle="modal" id="signup_alert" data-bs-target="#signupAlertMessage">
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="signupAlertMessage" tabindex="-1" aria-labelledby="signupAlertMessageLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_bg">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger" id="signupAlertMessageLabel">Alert!!!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark">
+                        Please fill all the inputs.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <div type="button" data-bs-toggle="modal" id="signup_alert-2" data-bs-target="#signupAlertMessage_2">
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="signupAlertMessage_2" tabindex="-1" aria-labelledby="signupAlertMessageLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_bg">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger" id="signupAlertMessageLabel">Alert!!!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark">
+                        Image not uploaded yet.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <div type="button" data-bs-toggle="modal" id="signup_alert_3" data-bs-target="#signupAlertMessage_3">
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="signupAlertMessage_3" tabindex="-1" aria-labelledby="signupAlertMessageLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_bg">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger" id="signupAlertMessageLabel">Alert!!!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark">
+                        Check all the input value.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- js Script -->
+    <script src="./js/signup.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

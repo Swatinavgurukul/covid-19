@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Covid-19-App</title>
+
+    <meta name="title" content="Covid-19-App">
+    <meta name="description" content="This is a covid-19 app. It will collect all data all cases from India">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- CSS Style  -->
+    <link rel="stylesheet" href="./css/global.css">
+
+</head>
+
+<body class="login_page">
+
+    <div class="container p-0">
+
+        <!-- login form-->
+        <div class="row justify-content-center align-items-center h-100">
+            <form class="px-3 py-3 form_container">
+                <h1 class="text-center py-2">Login</h1>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp"
+                        placeholder="Email address">
+                </div>
+                <div class="mb-3">
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="userPassword" placeholder="Password">
+                    </div>
+                </div>
+                <div class="mb-3 form-check p-0" id="rememberMeBox">
+                    <input type="checkbox" class="rememberMe" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember Me</label>
+                </div>
+                <div class="col-10 text-start mb-2">
+                    <a href="#" id="alreadyNotAcount" class="text-dark">If you have not an acount!</a>
+                </div>
+                <div class="text-center mt-4">
+                    <button type="button" class="btn login_btn" id="loginBtn">Login</button>
+                </div>
+            </form>
+        </div>
+        <!-- Button trigger modal -->
+        <div type="button" data-bs-toggle="modal" id="login_alert_1" data-bs-target="#loginAlertMessage">
+
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="loginAlertMessage" tabindex="-1" aria-labelledby="loginAlertMessageLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_bg">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger" id="loginAlertMessageLabel">Alert!!!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark">
+                        Sorry! Signup first.!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <div type="button" data-bs-toggle="modal" id="login_alert_2" data-bs-target="#loginAlertMessage_2">
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="loginAlertMessage_2" tabindex="-1" aria-labelledby="loginAlertMessageLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_bg">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger" id="loginAlertMessageLabel">Alert!!!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark">
+                        User not exists.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <div type="button" data-bs-toggle="modal" id="login_alert_3" data-bs-target="#loginAlertMessage_3">
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="loginAlertMessage_3" tabindex="-1" aria-labelledby="loginAlertMessageLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_bg">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger" id="loginAlertMessageLabel">Alert!!!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark">
+                        Please fill all the inputs.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <div type="button" data-bs-toggle="modal" id="loggedin" data-bs-target="#loggedinAlertMessage_3">
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="loggedinAlertMessage_3" tabindex="-1" aria-labelledby="loggedinAlertMessageLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_bg">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-success" id="loginAlertMessageLabel">Alert!!!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark">
+                        Welcome, you are now logged in !
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- js Script -->
+    <script src="./js/login.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
