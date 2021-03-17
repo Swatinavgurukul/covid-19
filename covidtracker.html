@@ -32,17 +32,13 @@
 
     <div class="container-fluid p-0 dashboard_screen_container d-none" id="dashboard_screen_container">
 
-        <nav class="pt-3 border border-dark border-3 ">
-            <div class="px-3 d-flex justify-content-between">
+        <nav class="pt-3 border border-dark border-3 px-3 d-flex justify-content-between align-items-center">
+            <div>
+                <h2>Covid-19 tracker</h2>
+            </div>
 
-                <div>
-                    <h2>Covid-19 tracker</h2>
-                </div>
-                <div>
-                    <div class="logout__feature ml-3" onclick="logOutUser()">
-                        <img src="./image/logoutbtn1.png" width="40" class="ico-size"> Logout
-                    </div>
-                </div>
+            <div class="logout__feature mb-3" onclick="logOutUser()">
+                <img src="./image/logoutbtn1.png" width="40" class="ico-size">
             </div>
         </nav>
         <div class="container-fluid dashboard_screen_box">
@@ -84,39 +80,18 @@
                     </div>
 
                     <!-- Graphical Presentation headings -->
-                    <div>
-                        <div class="p-3">
-                            <div class="">
-                                <h5 class="text-center">Graphical Representation</h5>
-                            </div>
 
-                            <div class="text-info">
-                                <h6 class="text-center">Tested Confirmed and Recovered Stats</h6>
-                            </div>
+                    <div class="row">
+                        <div>
+                            <h5 class="text-center pt-5">Graphical Representation</h5>
                         </div>
-
-                        <!-- Graphical Presentation chart -->
-                        <div class="p-3 row row-cols-1 row-cols-md-2">
-                            <div class="mb-5 mb-lg-0">
-                                <div class="p-0 pt-3 p-md-3 mb-3">
-                                    <h5 class="text-start">State wise</h5>
-                                </div>
-
-                                <div class="state_wise_graph" id="state_wise_graph">
-                                </div>
-
-                            </div>
-
-                            <div class="">
-                                <div class="p-0 pt-3 p-md-3 mb-4">
-                                    <h5 class="text-start p-0">District wise</h5>
-                                </div>
-                                <div>
-
-                                    <div class="district_wise_graph" id="district_wise_graph">
-                                    </div>
-
-                                </div>
+                        <div class="graph-info text-center">
+                            <span class="text-danger">Active</span>
+                            <span class="text-success">Recovered</span>
+                            <span class="text-dark">Deceased</span>
+                        </div>
+                        <div class="col-12 pt-5">
+                            <div class="state_wise_graph" id="state_wise_graph">
                             </div>
                         </div>
                     </div>
@@ -125,23 +100,7 @@
         </div>
     </div>
     <!-- Graphical Presentation headings -->
-    <!-- <div class="">
-                            <h5 class="text-center">Graphical Representation</h5>
-                        </div>
-                        <div class="graph-info text-center">
-                            <span class="text-danger" >Active</span>
-                            <span class="text-success" >Recovered</span>
-                            <span class="text-dark">Deceased</span>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-0 pt-3 p-md-3 mb-3">
-                                <h5 class="text-start">State wise</h5>
-                            </div>
 
-                            <div class="state_wise_graph" id="state_wise_graph">
-                            </div>
-
-                        </div> -->
     <!-- js script -->
     <script src="./js/covidtracker.js"></script>
 

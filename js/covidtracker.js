@@ -1,6 +1,5 @@
 //Getting the data from cookie
 let state_container = document.getElementById('state_container')
-let district_wise_graph_container = document.getElementById('district_wise_graph')
 let state_wise_graph_container = document.getElementById('state_wise_graph')
 let selected_state = document.getElementById('selected_state')
 let confirmed_cases = document.getElementById('tested_cases')
@@ -19,13 +18,13 @@ fetch(`https://api.covid19india.org/state_district_wise.json`)
         couunt = 0;
         for (const [key, value] of Object.entries(result)) {
             count += 1
+            // checked
             state_container.innerHTML += `
-                        <div class="form-check">
-                                                    
+                        <div class="form-check">                        
                         <label class="form-check-label text-info" for="single_state_${count}">
                         <abbr title="${key}">${value.statecode}</abbr>
                             <input class="form-check-input single_state" type="checkbox" name="" value="select" checked
-                                id="single_state_${count} checked">
+                            id="single_state_${count}">
                             </label>
                         </div>
                         `
@@ -35,7 +34,7 @@ fetch(`https://api.covid19india.org/state_district_wise.json`)
         document.getElementById('dashboard_screen_container').classList.remove('d-none')
     })
 
-    //Function of select state and show datas of selected state
+    // Function of select state and show datas of selected state
     .then(() => {
         let selected_state_by_click = []
         let all_checkbox_input = document.querySelectorAll('input[type=checkbox]');
@@ -61,7 +60,6 @@ function getDataOfSingleState(states) {
         .then((result) => {
             delete result['State Unassigned']
 
-            district_wise_graph_container.innerHTML = '';
             state_wise_graph_container.innerHTML = '';
 
             selected_state.innerText = states.length
@@ -83,27 +81,11 @@ function getDataOfSingleState(states) {
                             confirmedCases += value.confirmed
                             activeCases += value.active
                             recoveredCases += value.recovered
-                            //Inserting the state graph into html
-                            district_wise_graph_container.innerHTML += `
-                                <div class="mb-1 p-1">
-                                <span class="text-dark">${key}</span>
-                                <div class="bg-danger p-0 m-0" style="height: 20px; width: ${((value.active) / 100000) * 100}%;">
-                                    <div class="text-end">
-                                        <code class="p-0 m-0 text-center">${(((value.active) / 100000) * 100)}%</code>
-                                    </div>
-                                </div>
-                                <div class="bg-success" style="height: 20px; width: ${(((value.confirmed) / 100000) * 100)}%; margin-bottom: 2px;">
-                                    <div class="text-end">
-                                        <code class="text-dark text-center">${((value.confirmed) / 100000) * 100}%</code>
-                                    </div>
-                                </div>
-                            </div>`
                         }
                         selected_state.innerText = states.length
                         confirmed_cases.innerText = confirmedCases
                         active_cases.innerText = activeCases
                         recovered_cases.innerText = recoveredCases
-                        console.log(value, "value")
                         //Inserting the district into html
                         state_wise_graph_container.innerHTML += `
                         
